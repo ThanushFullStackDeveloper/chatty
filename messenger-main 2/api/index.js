@@ -36,7 +36,9 @@ mongoose
 app.listen(port, () => {
   console.log("Server running on port 8000");
 });
-
+app.get("/" , (req , res) =>{
+  res.json("Hello")
+})
 const User = require("./models/user");
 const Message = require("./models/message");
 
