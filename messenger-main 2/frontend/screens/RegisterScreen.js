@@ -27,7 +27,7 @@ const RegisterScreen = () => {
 
     // send a POST  request to the backend API to register the user
     axios
-      .post("http://localhost:8000/register", user)
+      .post("https://deploy-mern-app.vercel.app/register", user)
       .then((response) => {
         console.log(response);
         Alert.alert(
