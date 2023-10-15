@@ -13,7 +13,7 @@ const ChatsScreen = () => {
     const acceptedFriendsList = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/accepted-friends/${userId}`
+          `https://deploy-mern-app.vercel.app//accepted-friends/${userId}`
         );
         const data = await response.json();
 
