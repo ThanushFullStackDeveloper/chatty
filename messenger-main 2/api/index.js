@@ -16,7 +16,7 @@ const jwt = require("jsonwebtoken");
 
 app.use(cors(
   {
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: ["https://deploy-mern-app.vercel.app/"],
     methods:["POST" , "GET"],
     credentials:true
   }
