@@ -56,7 +56,7 @@ const ChatMessagesScreen = () => {
   const fetchMessages = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/messages/${userId}/${recepientId}`
+        `https://deploy-mern-app.vercel.app//messages/${userId}/${recepientId}`
       );
       const data = await response.json();
 
@@ -78,7 +78,7 @@ const ChatMessagesScreen = () => {
     const fetchRecepientData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/user/${recepientId}`
+          `https://deploy-mern-app.vercel.app//user/${recepientId}`
         );
 
         const data = await response.json();
@@ -109,7 +109,7 @@ const ChatMessagesScreen = () => {
         formData.append("messageText", message);
       }
 
-      const response = await fetch("http://localhost:8000/messages", {
+      const response = await fetch("https://deploy-mern-app.vercel.app//messages", {
         method: "POST",
         body: formData,
       });
@@ -182,7 +182,7 @@ const ChatMessagesScreen = () => {
 
   const deleteMessages = async (messageIds) => {
     try {
-      const response = await fetch("http://localhost:8000/deleteMessages", {
+      const response = await fetch("https://deploy-mern-app.vercel.app//deleteMessages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
