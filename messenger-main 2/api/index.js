@@ -14,6 +14,13 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 const jwt = require("jsonwebtoken");
 
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods:["POST" , "GET"],
+    credentials:true
+  }
+))
 mongoose
   .connect("mongodb+srv://Thanush123:9Jk8yu8rm1G46q6T@whatsappcluster.oirkv9g.mongodb.net/", {
     useNewUrlParser: true,
